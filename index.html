@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="app" class="dark">
+            <h2>Vue presentation at {{ location }}</h2>
+            <label>Add an attendee</label>
+            <input type="text" v-model="newAttendee"></input>
+            <p>Welcome to {{ location }} {{ newAttendee }}</p>
+            <button v-on:click="addAttendee()">Add attendee</button>
+            <p v-for="a in attendees"> {{ a }}</p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
